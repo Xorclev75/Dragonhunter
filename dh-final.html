@@ -1,0 +1,87 @@
+	<!DOCTYPE html>
+	<html class="no-js" lang="en">
+
+	<head>	
+    <meta charset="utf-8">
+
+    <!--====== Title ======-->
+    <title>Dragon Hunter</title>
+
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="/images/dh2.jpeg" type="image/jpg"> 
+	
+	<!--====== Stylesheet ======--> 
+    <link rel="stylesheet" href="C:/Users/schwa/OneDrive/WebDev/css/dh-styles.css">
+	<link rel="stylesheet" href="/css/dh-styles.css">
+
+	</head>
+	<body>
+	<div class="dh-finale">
+	<div id="dh-finale-whisper">
+	<div class="img">
+	<img src= "C:/Users/schwa/OneDrive/WebDev/images/Whisper2.png" class="dh-finale-img">
+	</div>
+	<div class="dh-finale-text">
+	<p class="finale-p">You've defeated all of the dragons!</p>
+	<p class="finale-p">I cannot wait to inform the King!</p>
+	<p class="finale-p">You truly are a hero!</p>
+	</div>
+	<div class="dh-finale-buttons">
+		<button id="finaleButton">Continue</button>		
+	</div>
+	</div>
+	<div id="dh-finale-eggs">
+	<div class="img">
+	<img src= "C:/Users/schwa/OneDrive/WebDev/images/dragonEggs.png" class="dh-finale-img">
+	</div>
+	<div class="dh-finale-text">
+	<p class="finale-p">But look at what I found in the dungeon of the castle...</p>
+	<p class="finale-p">Dragon eggs!</p>
+	<p class="finale-p">Now we know why the dragons attacked in the first place!</p>
+	</div>
+	<div class="dh-finale-buttons">
+		<button id="finaleButton2">Continue</button>		
+	</div>
+	</div>
+	<div id="dh-finale-jester">
+	<div class="img">
+	<img src= "C:/Users/schwa/OneDrive/WebDev/images/madJester.jpg" class="dh-finale-img">
+	</div>
+	<div class="dh-finale-text">
+	<p class="finale-jester-p">Those are my dragon eggs!</p>
+	<p class="finale-jester-p">I stole them fair and square!</p>
+	<p class="finale-jester-p">And you shall not have them!</p>
+	</div>
+	<div class="dh-finale-buttons">
+		<button id="finaleButton3">Continue</button>		
+	</div>
+	</div>
+	</div> <!-- dh-finale -->
+	<script>
+		const finaleBtn = document.getElementById("finaleButton");
+		const finaleWhisper	= document.getElementById("dh-finale-whisper");
+		const finaleBtn2 = document.getElementById("finaleButton2");
+		const finaleEggs = document.getElementById("dh-finale-eggs");
+		const finaleBtn3 = document.getElementById("finaleButton3");
+		const finaleJester = document.getElementById("dh-finale-jester");
+		
+		finaleBtn.addEventListener("click", function() {
+			finaleWhisper.style.display = "none";
+			finaleEggs.style.display = "flex";
+		});
+		
+		finaleBtn2.addEventListener("click", function() {
+			finaleEggs.style.display = "none";
+			finaleJester.style.display = "flex";
+		});
+		
+		finaleBtn3.addEventListener("click", function() {
+			location.href = "dh-jester.html";
+		});
+	
+	</script>
+	</body>
+	</html>

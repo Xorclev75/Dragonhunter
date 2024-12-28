@@ -1,0 +1,71 @@
+	<!DOCTYPE html>
+	<html class="no-js" lang="en">
+
+	<head>	
+    <meta charset="utf-8">
+
+    <!--====== Title ======-->
+    <title>Dragon Hunter</title>
+
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="/images/dh2.jpeg" type="image/jpg"> 
+	
+	<!--====== Stylesheet ======--> 
+    <link rel="stylesheet" href="C:/Users/schwa/OneDrive/WebDev/css/dh-styles.css">
+	<link rel="stylesheet" href="/css/dh-styles.css">
+	</head>
+	<body>
+	<div id="dh-whisper" class="dh-whisper-text">
+	<div class="img">
+	<img src= "/images/Whisper.png" class="dh-whisper-img">
+	</div>
+	<div id="whisperChat">	
+	</div>
+	<input id="input-name" type="text" name="name" placeholder="Enter your name">
+	<div class="name-button-container">			  
+    <button id="whisperButton" type="button">Submit</button>
+	</div>
+	</div>	
+<script>
+    const whisperButton = document.getElementById("whisperButton");
+	const whisperChat = document.getElementById("whisperChat");
+	
+	function setChat() {
+			whisperChat.innerHTML = "Dragon Hunter, please do not be afraid. <br> My name is Whisper and I'm a kindly spirit who inhabits this castle. <br> You appear to have been injured when the dragons attacked. <br> Do you know your name?";			
+		}
+		
+		setChat();
+
+	whisperButton.addEventListener("click", function () {		
+		const heroName = document.getElementById("input-name").value.trim(); // Get the name value inside the function		
+		let checkName = heroName.toLowerCase();
+		
+		// List of forbidden words
+		const forbiddenWords = ["shit", "bitch", "damn", "balls", "fuck", "cunt", "whore", "slut", "tits", "penis", "vagina", "scrotum", "taint", "cock", "dick", "suck", "wank", "twat"]; 
+
+		// Check if any forbidden word is in the name
+		const hasBadWord = forbiddenWords.some(word => checkName.includes(word));
+		whisperChat.innerHTML = "Please watch your language in this castle!";
+		if (hasBadWord) {
+			document.getElementById("input-name").value = ""; // Clear the input field        
+		} else if (checkName === "") {
+			whisperChat.innerHTML = "You do not remember your name? Please try harder to remember...";
+			//setTimeout(storeName, 1000);
+		} else {
+		    localStorage.setItem("heroName", heroName);
+			storeName();
+		}
+	});
+	
+		function storeName() {			
+			location.href = "dh-castle.html";
+		}
+
+	
+</script>
+
+	</body>
+	</html>

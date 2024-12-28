@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>	
+    <meta charset="utf-8">
+    <title>Dragon Hunter</title>
+    
+	<meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="/images/dh2.jpeg" type="image/jpg">
+	
+	<!--====== Stylesheet ======--> 
+    <link rel="stylesheet" href="C:/Users/schwa/OneDrive/WebDev/css/dh-styles.css">
+	<link rel="stylesheet" href="/css/dh-styles.css">
+
+	<body>
+	
+	<div class="dh-map-background">
+	<h2 class="dh-map-h2">Choose Your Path</h2>
+	<div class="dh-map-buttons">
+	<button id="earthDragon">Earth Dragon</button>
+	<button id="fireDragon">Fire Dragon</button>
+	<button id="iceDragon">Ice Dragon</button>
+	<button id="windDragon">Wind Dragon</button>
+	<button id="castleButton">Castle Obsidian</button>	
+	<button id="cancelButton">Quit</button>
+	</div> <!-- dh-map-buttons -->	
+	</div>
+	
+	<script>
+		const earthDragon = document.getElementById("earthDragon");
+		const fireDragon = document.getElementById("fireDragon");
+		const iceDragon = document.getElementById("iceDragon");
+		const windDragon = document.getElementById("windDragon");
+		const castleButton = document.getElementById("castleButton");
+		const cancelButton = document.getElementById("cancelButton");
+
+		
+		
+		document.addEventListener("DOMContentLoaded", function () {    
+
+			// Get dragon statuses from localStorage
+			const edrgDefeated = localStorage.getItem("edrgDefeated") === "true";
+			const fdrgDefeated = localStorage.getItem("fdrgDefeated") === "true";
+			const idrgDefeated = localStorage.getItem("idrgDefeated") === "true";
+			const wdrgDefeated = localStorage.getItem("wdrgDefeated") === "true";
+
+			// Disable buttons based on dragon defeat status
+			if (edrgDefeated) {
+				earthDragon.disabled = true;
+				fireDragon.disabled = false;
+			} else {
+				earthDragon.disabled = false;
+				fireDragon.disabled = true;
+			}
+
+			if (fdrgDefeated) {
+				fireDragon.disabled = true;
+				iceDragon.disabled = false;
+			} else {
+				iceDragon.disabled = true;
+			}
+
+			if (idrgDefeated) {
+				iceDragon.disabled = true;
+				windDragon.disabled = false;
+			} else {
+				windDragon.disabled = true;
+			}
+
+			if (wdrgDefeated) {
+				windDragon.disabled = true;
+			}
+		});
+
+		earthDragon.addEventListener("click", function() {
+		  location.href = "dh-earth.html";
+		});
+		
+		fireDragon.addEventListener("click", function() {
+		  location.href = "dh-fire.html";
+		});
+		
+		iceDragon.addEventListener("click", function() {
+		  location.href = "dh-ice.html";
+		});
+		
+		windDragon.addEventListener("click", function() {
+		  location.href = "dh-wind.html";
+		});
+		
+		castleButton.addEventListener("click", function() {
+			location.href = "dh-castle.html";		
+		}); 
+
+		
+		cancelButton.addEventListener("click", function() {
+			location.href = "dh.html";
+		});
+
+	</script>
+	</body>
+	</html>

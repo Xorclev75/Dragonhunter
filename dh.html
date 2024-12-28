@@ -1,0 +1,56 @@
+	<!DOCTYPE html>
+	<html class="no-js" lang="en">
+
+	<head>	
+    <meta charset="utf-8">
+
+    <!--====== Title ======-->
+    <title>Dragon Hunter</title>
+
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="/images/dh2.jpeg" type="image/jpg"> 
+	
+	<!--====== Stylesheet ======--> 
+    <link rel="stylesheet" href="C:/Users/schwa/OneDrive/WebDev/css/dh-styles.css">
+	<link rel="stylesheet" href="/css/dh-styles.css">
+		
+	</head>
+	<body>	
+	<div class="dh-background">
+	<div class="center">
+	<h1 class="dh-h1">Dragon Hunter</h1>
+	<div class="dh-img">
+	<img src= "/images/dh.png" style="height: 500px;" type="image/png">
+	</div>
+	<div class="start">
+	<button id="startButton">Start</button>
+	</div>
+	</div>
+	</div> <!-- dh-background div -->
+	<script>
+			const button = document.getElementById("startButton");
+			const edrgDefeated = localStorage.getItem("edrgDefeated") === "false";
+			const fdrgDefeated = localStorage.getItem("fdrgDefeated") === "true";
+			const idrgDefeated = localStorage.getItem("idrgDefeated") === "true";
+			const wdrgDefeated = localStorage.getItem("wdrgDefeated") === "true";
+			
+			console.log("edrgDefeated= " + edrgDefeated);
+			console.log("fdrgDefeated= " + fdrgDefeated);
+			console.log("idrgDefeated= " + idrgDefeated);
+			console.log("wdrgDefeated= " + wdrgDefeated);
+
+			button.addEventListener("click", function() {
+			  location.href = "dh-whisper.html";
+			});
+			
+			document.addEventListener("DOMContentLoaded", function () {
+			let heroName = "";			
+			let riddleReset = 0; 
+			localStorage.setItem('riddleNumber', riddleReset);			
+			});
+	</script>
+	</body>
+	</html>
