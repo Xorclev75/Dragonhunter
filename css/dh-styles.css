@@ -148,7 +148,8 @@
         .center {
             display: flex;
             justify-content: center;
-            flex-direction: row;	
+			align-items: center;
+            flex-direction: column;	
         }
 		
         .fightButtons {	
@@ -329,7 +330,7 @@
 		
 		.dh-whisper-text {
 			font-size: 1.2em;
-			margin: 350px 10px 20px 10px;
+			margin-top: 100px;
 			text-align: center;
 			color: var(--white);
 		}
@@ -355,9 +356,10 @@
 		}
 		.dh-whisper-text {
 			font-size: 1.2em;
-			margin: 300px 5px 10px 5px;
+			margin-top: 100px;
 			text-align: center;
 			color: var(--white);
+			padding: 10px;
 		}
 		#input-name {
 		color: var(--black);
@@ -494,6 +496,13 @@
 	.dh-finale-img, .dh-fWhisper-img {		
 		width: 15vw;
 		}
+		
+	.finaleImg {
+	padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	}
 	
 	.dh-finale-buttons {
 		display: flex;
@@ -537,6 +546,11 @@
 			text-align: center;
 			color: var(--white);
 		}
+		.finaleImg {
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center; }
 		}
 		
 		/* dh-ending */
