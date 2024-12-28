@@ -173,7 +173,7 @@
 		function drgDefeat() {
 			if (eHP <= 0) {
 				let edrgDefeated = true;
-				localStorage.setItem('edrgDefeated', edrgDefeated);
+				localStorage.setItem('edrgDefeated', edrgDefeated);				
 				console.log("edrgDefeated = " + edrgDefeated);
 				showModal("You defeated the Earth Dragon!  HP, Attack and Defense go up by 1 Level!");								
 			}
@@ -196,7 +196,7 @@
 
 		// Three buttons
 		attackButton.addEventListener("click", function () {
-			let randomNumber = Math.floor(Math.random() * 24) + 1;
+			let randomNumber = Math.floor(Math.random() * 24) + 200; // fix this before going live!!!
 			eHP = Math.max(eHP - randomNumber, 0); // Ensure HP doesn't go below 0
 			updateHP();
 			playerMessage.textContent = "You slash the dragon for " + randomNumber + " points of damage!";

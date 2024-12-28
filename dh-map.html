@@ -38,41 +38,54 @@
 
 		
 		
-		document.addEventListener("DOMContentLoaded", function () {    
+		document.addEventListener("DOMContentLoaded", function () {		
+		const edrgDefeated = localStorage.getItem('edrgDefeated');	
+		const fdrgDefeated = localStorage.getItem('fdrgDefeated');
+		const idrgDefeated = localStorage.getItem('idrgDefeated');	
+		const wdrgDefeated = localStorage.getItem('wdrgDefeated');
+		
+		console.log("edrgDefeated: ", edrgDefeated);
+        console.log("fdrgDefeated: ", fdrgDefeated);
+        console.log("idrgDefeated: ", idrgDefeated);
+        console.log("wdrgDefeated: ", wdrgDefeated);
 
-			// Get dragon statuses from localStorage
-			const edrgDefeated = localStorage.getItem("edrgDefeated") === "true";
-			const fdrgDefeated = localStorage.getItem("fdrgDefeated") === "true";
-			const idrgDefeated = localStorage.getItem("idrgDefeated") === "true";
-			const wdrgDefeated = localStorage.getItem("wdrgDefeated") === "true";
-
-			// Disable buttons based on dragon defeat status
-			if (edrgDefeated) {
-				earthDragon.disabled = true;
-				fireDragon.disabled = false;
-			} else {
-				earthDragon.disabled = false;
-				fireDragon.disabled = true;
-			}
-
-			if (fdrgDefeated) {
-				fireDragon.disabled = true;
-				iceDragon.disabled = false;
-			} else {
-				iceDragon.disabled = true;
-			}
-
-			if (idrgDefeated) {
-				iceDragon.disabled = true;
-				windDragon.disabled = false;
-			} else {
-				windDragon.disabled = true;
-			}
-
-			if (wdrgDefeated) {
-				windDragon.disabled = true;
-			}
-		});
+		// Check if Earth Dragon is defeated
+		if (edrgDefeated === 'true') { 
+			earthDragon.disabled = true;
+			fireDragon.disabled = false;
+			iceDragon.disabled = true;
+			windDragon.disabled = true;
+		} else {
+		    earthDragon.disabled = false;
+			fireDragon.disabled = true;
+			iceDragon.disabled = true;
+			windDragon.disabled = true;
+		}
+		
+		// Check if Fire Dragon is defeated
+		if (fdrgDefeated === 'true') { 
+			earthDragon.disabled = true;
+			fireDragon.disabled = true;
+			iceDragon.disabled = false;
+			windDragon.disabled = true;
+		} 
+		
+		// Check if Ice Dragon is defeated
+		if (idrgDefeated === 'true') { 
+			earthDragon.disabled = true;
+			fireDragon.disabled = true;
+			iceDragon.disabled = true;
+			windDragon.disabled = false;
+		} 
+		
+		// Check if Wind Dragon is defeated
+		if (wdrgDefeated === 'true') { 
+			earthDragon.disabled = true;
+			fireDragon.disabled = true;
+			iceDragon.disabled = true;
+			windDragon.disabled = true;
+		} 
+	});
 
 		earthDragon.addEventListener("click", function() {
 		  location.href = "dh-earth.html";
