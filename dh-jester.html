@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/dh2.jpeg" type="image/jpg">	
 	
 	<!--====== Stylesheet ======--> 
-    <link rel="stylesheet" href="C:/Users/schwa/OneDrive/WebDev/css/dh-styles.css">
+    <link rel="stylesheet" href="C:/Users/schwa/OneDrive/WebDev/Dragon Hunter/css/dh-styles.css">
 	<link rel="stylesheet" href="/css/dh-styles.css">
 
 </head>
@@ -149,7 +149,7 @@
 		// Event listener for the modal button
 		modalButton.addEventListener("click", function () {
 			if(eHP <= 0) {			
-			location.href = "dh-map.html"; 
+			location.href = "dh-ending.html"; 
 			} else {
 			gameModal.style.display = "none"; // Hide the modal
 			resetGame(); // Call a function to reset or continue the game
@@ -163,7 +163,6 @@
 				localStorage.setItem('idrgDefeated', idrgDefeated);
 				console.log("idrgDefeated = " + idrgDefeated);
 				showModal("You defeated the Mad Jester!");	
-				location.href = "dh-ending.html";
 			}
 		}
 

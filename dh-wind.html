@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/dh2.jpeg" type="image/jpg">	
 	
 	<!--====== Stylesheet ======--> 
-    <link rel="stylesheet" href="C:/Users/schwa/OneDrive/WebDev/css/dh-styles.css">
+    <link rel="stylesheet" href="C:/Users/schwa/OneDrive/WebDev/Dragon Hunter/css/dh-styles.css">
 	<link rel="stylesheet" href="/css/dh-styles.css">
 
 </head>
@@ -127,7 +127,8 @@
 		}
 
 		// Initialize HP displays
-		updateHP();
+		updateHP();		
+
 		
 		// Function to clear messages
 		function clearMsg() {
@@ -149,7 +150,7 @@
 		// Event listener for the modal button
 		modalButton.addEventListener("click", function () {
 			if(eHP <= 0) {			
-			location.href = "dh-map.html"; 
+			location.href = "dh-final.html"; 
 			} else {
 			gameModal.style.display = "none"; // Hide the modal
 			resetGame(); // Call a function to reset or continue the game
@@ -162,8 +163,7 @@
 				let wdrgDefeated = true;
 				localStorage.setItem('wdrgDefeated', wdrgDefeated);
 				console.log("wdrgDefeated = " + wdrgDefeated);
-				showModal("You defeated the Wind Dragon!  HP, Attack and Defense go up by 1 Level!");	
-				location.href = "dh-final.html";
+				showModal("You defeated the Wind Dragon!  HP, Attack and Defense go up by 1 Level!");					
 			}
 		}
 
