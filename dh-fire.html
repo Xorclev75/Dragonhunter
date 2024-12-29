@@ -183,7 +183,7 @@
 
 		// Three buttons
 		attackButton.addEventListener("click", function () {
-			let randomNumber = Math.floor(Math.random() * 34) + 300;
+			let randomNumber = Math.floor(Math.random() * 34) + 20;
 			eHP = Math.max(eHP - randomNumber, 0); // Ensure HP doesn't go below 0
 			updateHP();
 			playerMessage.textContent = "You slash the dragon for " + randomNumber + " points of damage!";
@@ -194,7 +194,7 @@
 
 		defendButton.addEventListener("click", function () {
 			let rdmNumber = Math.floor(Math.random() * 100) + 1;
-			let randomNumber = Math.floor(Math.random() * 44) + 10;
+			let randomNumber = Math.floor(Math.random() * 44) + 30;
 			if(rdmNumber > 45) {
 			eHP = Math.max(eHP - randomNumber, 0); // Ensure HP doesn't go below 0
 			updateHP();
