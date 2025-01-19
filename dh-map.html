@@ -1,117 +1,34 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>	
-    <meta charset="utf-8">
-    <title>Dragon Hunter</title>
-    
-	<meta name="robots" content="noindex">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!DOCTYPE html>
+	<html lang="en">
 
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="/images/dh2.jpeg" type="image/jpg">
-	
-	<!--====== Stylesheet ======--> 
-    <link rel="stylesheet" href="C:/Users/schwa/OneDrive/WebDev/css/dh-styles.css">
-	<link rel="stylesheet" href="/css/dh-styles.css">
+	<head>
+		<meta charset="utf-8">
+		<title>Dragon Hunter</title>
+		<meta name="robots" content="noindex">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Favicon -->
+		<link rel="icon" href="./images/dh2.jpeg">
+
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="./css/dh-styles.css">
+	</head>
 
 	<body>
 	
-	<div class="dh-map-background">
+	<main class="dh-map-background">
+	<header>
 	<h2 class="dh-map-h2">Choose Your Path</h2>
-	<div class="dh-map-buttons">
-	<button id="earthDragon">Earth Dragon</button>
-	<button id="fireDragon">Fire Dragon</button>
-	<button id="iceDragon">Ice Dragon</button>
-	<button id="windDragon">Wind Dragon</button>
-	<button id="castleButton">Castle Obsidian</button>	
-	<button id="cancelButton">Quit</button>
-	</div> <!-- dh-map-buttons -->	
-	</div>
-	
-	<script>
-		const earthDragon = document.getElementById("earthDragon");
-		const fireDragon = document.getElementById("fireDragon");
-		const iceDragon = document.getElementById("iceDragon");
-		const windDragon = document.getElementById("windDragon");
-		const castleButton = document.getElementById("castleButton");
-		const cancelButton = document.getElementById("cancelButton");
-
-		
-		
-		document.addEventListener("DOMContentLoaded", function () {		
-		const edrgDefeated = localStorage.getItem('edrgDefeated');	
-		const fdrgDefeated = localStorage.getItem('fdrgDefeated');
-		const idrgDefeated = localStorage.getItem('idrgDefeated');	
-		const wdrgDefeated = localStorage.getItem('wdrgDefeated');
-		
-		console.log("edrgDefeated: ", edrgDefeated);
-        console.log("fdrgDefeated: ", fdrgDefeated);
-        console.log("idrgDefeated: ", idrgDefeated);
-        console.log("wdrgDefeated: ", wdrgDefeated);
-
-		// Check if Earth Dragon is defeated
-		if (edrgDefeated === 'true') { 
-			earthDragon.disabled = true;
-			fireDragon.disabled = false;
-			iceDragon.disabled = true;
-			windDragon.disabled = true;
-		} else {
-		    earthDragon.disabled = false;
-			fireDragon.disabled = true;
-			iceDragon.disabled = true;
-			windDragon.disabled = true;
-		}
-		
-		// Check if Fire Dragon is defeated
-		if (fdrgDefeated === 'true') { 
-			earthDragon.disabled = true;
-			fireDragon.disabled = true;
-			iceDragon.disabled = false;
-			windDragon.disabled = true;
-		} 
-		
-		// Check if Ice Dragon is defeated
-		if (idrgDefeated === 'true') { 
-			earthDragon.disabled = true;
-			fireDragon.disabled = true;
-			iceDragon.disabled = true;
-			windDragon.disabled = false;
-		} 
-		
-		// Check if Wind Dragon is defeated
-		if (wdrgDefeated === 'true') { 
-			earthDragon.disabled = true;
-			fireDragon.disabled = true;
-			iceDragon.disabled = true;
-			windDragon.disabled = true;
-		} 
-	});
-
-		earthDragon.addEventListener("click", function() {
-		  location.href = "dh-earth.html";
-		});
-		
-		fireDragon.addEventListener("click", function() {
-		  location.href = "dh-fire.html";
-		});
-		
-		iceDragon.addEventListener("click", function() {
-		  location.href = "dh-ice.html";
-		});
-		
-		windDragon.addEventListener("click", function() {
-		  location.href = "dh-wind.html";
-		});
-		
-		castleButton.addEventListener("click", function() {
-			location.href = "dh-castle.html";		
-		}); 
-
-		
-		cancelButton.addEventListener("click", function() {
-			location.href = "dh.html";
-		});
-
-	</script>
+	</header>
+	<section class="dh-map-buttons">
+	<button id="earthDragon" aria-label="Earth Dragon button">Earth Dragon</button>
+	<button id="fireDragon" aria-label="Fire Dragon button">Fire Dragon</button>
+	<button id="iceDragon" aria-label="Ice Dragon button">Ice Dragon</button>
+	<button id="windDragon" aria-label="Wind Dragon button">Wind Dragon</button>
+	<button id="castleButton" aria-label="Castle Obsidian button">Castle Obsidian</button>	
+	<button id="cancelButton" aria-label="Quit Game button">Quit</button>
+	</section> <!-- dh-map-buttons -->	
+	</main>	
+	<script src="./js/dh-map.js"></script>
 	</body>
 	</html>

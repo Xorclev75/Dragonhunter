@@ -1,53 +1,31 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
+	<!DOCTYPE html>
+	<html lang="en">
 
-<head>    
+	<head>
     <meta charset="utf-8">
-
-    <!--====== Title ======-->
-    <title>Dragon Hunter</title>
-
-    <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="/images/dh2.jpeg" type="image/jpg"> 
+    <meta name="robots" content="noindex">
+    <title>Dragon Hunter</title>
     
-    <!--====== Stylesheet ======--> 
-    <link rel="stylesheet" href="C:/Users/schwa/OneDrive/WebDev/css/dh-styles.css">
-    <link rel="stylesheet" href="/css/dh-styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="./images/dh2.jpeg">
 
-</head>
-<body>
-    <div class="dh-ending">
-        <div id="dh-ending-whisper">
-		<div class="imgEnding">
-            <img src="/images/Whisper3.png" class="dh-ending-img">
-			</div>
-            <div id="dh-ending-text"></div>
-            <div class="dh-ending-buttons">
-                <button id="endingButton">Exit</button>        
-            </div>
-        </div>    
-    </div> <!-- dh-ending -->
-
-    <script>
-        const endingBtn = document.getElementById("endingButton");
-        const endingWhisper = document.getElementById("dh-ending-whisper");
-        const endingText = document.getElementById("dh-ending-text");
-        let heroName = localStorage.getItem('heroName'); // Retrieve from localStorage        
-       
-        
-        function setText() {
-            endingText.innerHTML =
-                "Thus, " + heroName + " saved the kingdom and returned the dragon eggs to their nests. <br> Once returned, the elemental dragons went back to safeguard their eggs. <br> The King and his family returned to the castle. <br> And all lived happily ever after...well, except for the Mad Jester who now resides in the castle dungeon where he can play riddle games with the rats! <br> THE END";
-        }
-
-        setText();
-
-        endingBtn.addEventListener("click", function() {        
-            location.href = "dh.html";
-        });
-    </script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/dh-styles.css">
+	</head>
+	<body>
+    <main class="dh-ending">
+        <section id="dh-ending-whisper">
+		<section class="imgEnding">
+            <img src="./images/Whisper3.png" class="dh-ending-img" alt="Whisper">
+			</section>
+            <section id="dh-ending-text"></section>
+            <section class="dh-ending-buttons">
+                <button id="endingButton" aria-label="Exit button">Exit</button>        
+            </section>
+        </section>    
+    </main> 
+	<!-- Javascript -->
+    <script src="./js/dh-ending.js"></script>
 </body>
 </html>

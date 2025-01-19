@@ -1,213 +1,90 @@
 	<!DOCTYPE html>
-	<html class="no-js" lang="en">
+	<html lang="en">
 
-	<head>	
-    <meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
+		<title>Dragon Hunter</title>
+		<meta name="robots" content="noindex">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--====== Title ======-->
-    <title>Dragon Hunter</title>
+		<!-- Favicon -->
+		<link rel="icon" href="./images/dh2.jpeg">
 
-    <meta name="robots" content="noindex">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="/images/dh2.jpeg" type="image/jpg"> 
-	
-	<!--====== Stylesheet ======--> 
-    <link rel="stylesheet" href="C:/Users/schwa/OneDrive/WebDev/Dragon Hunter/css/dh-styles.css">
-	<link rel="stylesheet" href="/css/dh-styles.css">
-	
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="./css/dh-styles.css">
 	</head>
+
 	<body>
-	<div id="dh-menu">
-	<div class="img">
-	<img src= "/images/Whisper2.png" class="dh-menu-img">
-	</div>
-	<div class="dh-menu-text">
+	<main>
+	<section id="dh-menu">
+	<section class="img">
+	<img src= "./images/Whisper2.png" alt="Whisper spirit image" class="dh-menu-img">
+	</section>
+	<section class="dh-menu-text">
 	<p class="menu-p">How may I be of service?</p>
-	</div>
-	<div class="dh-castle-buttons">
-		<button id="dragonButton">Dragons</button>
-		<button id="kingButton">The King</button>
-		<button id="jesterButton">Mad Jester</button>
-		<button id="whisperButton">Whisper</button>
-		<button id="mapButton">Go to Map</button>
-	</div>		
-	</div>
-	<div id="dh-menu-dragons">
-	<div class="img">
-	<img src= "/images/dhMap.jpg" class="dh-menu-img">
-	</div>
-	<div class="dh-menu-text">
+	</section>
+	<section class="dh-castle-buttons">
+		<button id="dragonButton" aria-label="Dragons button">Dragons</button>
+		<button id="kingButton" aria-label="King button">The King</button>
+		<button id="jesterButton" aria-label="Mad Jester button">Mad Jester</button>
+		<button id="whisperButton" aria-label="Whisper button">Whisper</button>
+		<button id="mapButton" aria-label="Map button">Go to Map</button>
+	</section>		
+	</section>
+	<section id="dh-menu-dragons">
+	<section class="img">
+	<img src= "./images/dhMap.jpg" alt="Dragon Hunter Map and Dragons image" class="dh-menu-img">
+	</section>
+	<section class="dh-menu-text">
 	<p class="menu-p">It was a fortnight ago that the dragons attacked the castle.</p>
 	<p class="menu-p">However, they gave the King a respite to allow his people to flee.</p>
 	<p class="menu-p">The King and his Mad Jester stayed behind.</p>
 	<p class="menu-p">Now the dragons fight among themselves...</p>
-	<button id="backButton">Back</button>
-	</div>
-	</div>
-	<div id="dh-menu-king">
-	<div class="img">
-	<img src= "/images/sadKing.jpeg" class="dh-menu-img">
-	</div>
-	<div class="dh-menu-text">
+	<button id="backButton" aria-label="Back button">Back</button>
+	</section>
+	</section>
+	<section id="dh-menu-king">
+	<section class="img">
+	<img src= "./images/sadKing.jpeg" alt="King image" class="dh-menu-img">
+	</section>
+	<section class="dh-menu-text">
 	<p class="menu-p">"I am King Valefor of Obsidian Castle.</p>
 	<p class="menu-p">I sent word out the moment the dragons arrived.</p>
 	<p class="menu-p">Unfortunately, you were attacked just beyond the castle walls.</p>
 	<p class="menu-p">Fleeing soldiers brought you here before making their escape."</p>
-	<button id="backButton2">Back</button>
-	</div>
-	</div>
-	<div id="dh-menu-jester">
-	<div class="img">
-	<img src= "/images/madJester.jpg" class="dh-menu-img">
-	</div>
-	<div class="dh-menu-text">
+	<button id="backButton2" aria-label="Back button">Back</button>
+	</section>
+	</section>
+	<section id="dh-menu-jester">
+	<section class="img">
+	<img src= "./images/madJester.jpg" alt="Mad Jester image" class="dh-menu-img">
+	</section>
+	<section class="dh-menu-text">
 	<p class="menu-p">"Haha! They call me the Mad Jester!</p>
 	<p class="menu-p">But, it's untrue, I'm just as sane as you!</p>
 	<p class="menu-p">So what if I like to play riddle games, whilst dragons reign fire down upon us?</p>
 	<p class="menu-p">I'll make it worth your while if you care to play..."</p>
-	<div class="jesterButtons">
-	<button id="riddleButton">Riddles</button>
-	<button id="backButton3">Back</button>
-	</div>
-	</div>
-	</div>
-	<div id="dh-menu-whisper">
-	<div class="img">
-	<img src= "/images/Whisper.png" class="dh-menu-img">
-	</div>
-	<div class="dh-menu-text">
+	<section class="jesterButtons">
+	<button id="riddleButton" aria-label="Riddles button">Riddles</button>
+	<button id="backButton3" aria-label="Back button">Back</button>
+	</section>
+	</section>
+	</section>
+	<section id="dh-menu-whisper">
+	<section class="img">
+	<img src= "./images/Whisper.png" alt="Whisper spirit image" class="dh-menu-img">
+	</section>
+	<section class="dh-menu-text">
 	<p class="menu-p">"I am the Whisper of Obsidian Castle.</p>
 	<p class="menu-p">A spirit who serves to guide and instruct those who reside here.</p>
 	<p class="menu-p">Beyond that, I do not know how I came to be nor how I came to be here."</p>
-	<button id="backButton4">Back</button>
-	</div>
-	</div>
-<script>
-	const dragonButton = document.getElementById("dragonButton");
-	const kingButton = document.getElementById("kingButton");
-	const jesterButton = document.getElementById("jesterButton");
-	const whisperButton = document.getElementById("whisperButton");
-	const backButton = document.getElementById("backButton");
-	const backButton2 = document.getElementById("backButton2");
-	const backButton3 = document.getElementById("backButton3");
-	const backButton4 = document.getElementById("backButton4");
-	const mapButton = document.getElementById("mapButton");
-	const riddleButton = document.getElementById("riddleButton");
-
-	// Cache DOM elements
-	const dragonMenu = document.getElementById("dh-menu-dragons");
-	const kingMenu = document.getElementById("dh-menu-king");
-	const jesterMenu = document.getElementById("dh-menu-jester");
-	const whisperMenu = document.getElementById("dh-menu-whisper");
-	const mainMenu = document.getElementById("dh-menu");
-
-	// Button event listeners
-	dragonButton.addEventListener("click", function () {
-		dragonMenu.style.display = "flex";
-		kingMenu.style.display = "none";
-		jesterMenu.style.display = "none";
-		whisperMenu.style.display = "none";
-		mainMenu.style.display = "none";
-	});
-
-	kingButton.addEventListener("click", function () {
-		dragonMenu.style.display = "none";
-		kingMenu.style.display = "flex";
-		jesterMenu.style.display = "none";
-		whisperMenu.style.display = "none";
-		mainMenu.style.display = "none";
-	});
-
-	jesterButton.addEventListener("click", function () {
-		dragonMenu.style.display = "none";
-		kingMenu.style.display = "none";
-		jesterMenu.style.display = "flex";
-		whisperMenu.style.display = "none";
-		mainMenu.style.display = "none";
-	});
-
-	whisperButton.addEventListener("click", function () {
-		dragonMenu.style.display = "none";
-		kingMenu.style.display = "none";
-		jesterMenu.style.display = "none";
-		whisperMenu.style.display = "flex";
-		mainMenu.style.display = "none";
-	});
-
-		backButton.addEventListener("click", function () {
-    console.log("Back button clicked!");
-
-		// Hide all menus
-		dragonMenu.style.display = "none";
-		kingMenu.style.display = "none";
-		jesterMenu.style.display = "none";
-		whisperMenu.style.display = "none";
-
-		// Show the main menu
-		mainMenu.style.display = "flex";
-		
-	});
+	<button id="backButton4" aria-label="Back button">Back</button>
+	</section>
+	</section>
+	</main>
 	
-	backButton2.addEventListener("click", function () {
-    console.log("Back button clicked!");
-
-		// Hide all menus
-		dragonMenu.style.display = "none";
-		kingMenu.style.display = "none";
-		jesterMenu.style.display = "none";
-		whisperMenu.style.display = "none";
-
-		// Show the main menu
-		mainMenu.style.display = "flex";
-		
-	});
-	
-	backButton3.addEventListener("click", function () {
-    console.log("Back button clicked!");
-
-		// Hide all menus
-		dragonMenu.style.display = "none";
-		kingMenu.style.display = "none";
-		jesterMenu.style.display = "none";
-		whisperMenu.style.display = "none";
-
-		// Show the main menu
-		mainMenu.style.display = "flex";
-		
-	});
-	
-	backButton4.addEventListener("click", function () {
-    console.log("Back button clicked!");
-
-		// Hide all menus
-		dragonMenu.style.display = "none";
-		kingMenu.style.display = "none";
-		jesterMenu.style.display = "none";
-		whisperMenu.style.display = "none";
-
-		// Show the main menu
-		mainMenu.style.display = "flex";
-
-		/* Log current display states for debugging
-		console.log("dragonMenu:", dragonMenu.style.display);
-		console.log("kingMenu:", kingMenu.style.display);
-		console.log("jesterMenu:", jesterMenu.style.display);
-		console.log("whisperMenu:", whisperMenu.style.display);
-		console.log("mainMenu:", mainMenu.style.display);*/
-	});
-
-	riddleButton.addEventListener("click", function () {
-		location.href = "dh-riddles.html";
-	});
-
-
-	mapButton.addEventListener("click", function () {
-		location.href = "dh-map.html";
-	});
-
-</script>
+	<!-- Javascript -->
+	<script src="./js/dh-castle.js"></script>
 
 	</body>
 	</html>

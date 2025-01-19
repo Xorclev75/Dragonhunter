@@ -1,87 +1,61 @@
 	<!DOCTYPE html>
-	<html class="no-js" lang="en">
+	<html lang="en">
 
-	<head>	
+	<head>
     <meta charset="utf-8">
-
-    <!--====== Title ======-->
-    <title>Dragon Hunter</title>
-
-    <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Dragon Hunter</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./images/dh2.jpeg">
 
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="/images/dh2.jpeg" type="image/jpg"> 
-	
-	<!--====== Stylesheet ======--> 
-    <link rel="stylesheet" href="C:/Users/schwa/OneDrive/WebDev/css/dh-styles.css">
-	<link rel="stylesheet" href="/css/dh-styles.css">
-
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/dh-styles.css">
 	</head>
 	<body>
-	<div class="dh-finale">
-	<div id="dh-finale-whisper">
-	<div class="finaleImg">
-	<img src= "/images/Whisper2.png" class="dh-finale-img">
-	</div>
-	<div class="dh-finale-text">
+	<main class="dh-finale">
+	<section id="dh-finale-whisper">
+	<section class="finaleImg">
+	<img src= "./images/Whisper2.png" class="dh-finale-img" alt="Whisper">
+	</section>
+	<section class="dh-finale-text">
 	<p class="finale-p">You've defeated all of the dragons!</p>
 	<p class="finale-p">I cannot wait to inform the King!</p>
 	<p class="finale-p">You truly are a hero!</p>
-	</div>
-	<div class="dh-finale-buttons">
-		<button id="finaleButton">Continue</button>		
-	</div>
-	</div>
-	<div id="dh-finale-eggs">
-	<div class="finaleImg">
-	<img src= "/images/dragonEggs.png" class="dh-finale-img">
-	</div>
-	<div class="dh-finale-text">
+	</section>
+	<section class="dh-finale-buttons">
+		<button id="finaleButton" aria-label="Continue button">Continue</button>		
+	</section>
+	</section>
+	<section id="dh-finale-eggs">
+	<section class="finaleImg">
+	<img src= "./images/dragonEggs.png" class="dh-finale-img" alt="Dragon eggs">
+	</section>
+	<section class="dh-finale-text">
 	<p class="finale-p">But look at what I found in the dungeon of the castle...</p>
 	<p class="finale-p">Dragon eggs!</p>
 	<p class="finale-p">Now we know why the dragons attacked in the first place!</p>
-	</div>
-	<div class="dh-finale-buttons">
-		<button id="finaleButton2">Continue</button>		
-	</div>
-	</div>
-	<div id="dh-finale-jester">
-	<div class="finaleImg">
-	<img src= "/images/madJester.jpg" class="dh-finale-img">
-	</div>
-	<div class="dh-finale-text">
+	</section>
+	<section class="dh-finale-buttons">
+		<button id="finaleButton2" aria-label="Continue button">Continue</button>		
+	</section>
+	</section>
+	<section id="dh-finale-jester">
+	<section class="finaleImg">
+	<img src= "./images/madJester.jpg" class="dh-finale-img" alt="Mad Jester">
+	</section>
+	<section class="dh-finale-text">
 	<p class="finale-jester-p">Those are my dragon eggs!</p>
 	<p class="finale-jester-p">I stole them fair and square!</p>
 	<p class="finale-jester-p">And you shall not have them!</p>
-	</div>
-	<div class="dh-finale-buttons">
-		<button id="finaleButton3">Continue</button>		
-	</div>
-	</div>
-	</div> <!-- dh-finale -->
-	<script>
-		const finaleBtn = document.getElementById("finaleButton");
-		const finaleWhisper	= document.getElementById("dh-finale-whisper");
-		const finaleBtn2 = document.getElementById("finaleButton2");
-		const finaleEggs = document.getElementById("dh-finale-eggs");
-		const finaleBtn3 = document.getElementById("finaleButton3");
-		const finaleJester = document.getElementById("dh-finale-jester");
-		
-		finaleBtn.addEventListener("click", function() {
-			finaleWhisper.style.display = "none";
-			finaleEggs.style.display = "flex";
-		});
-		
-		finaleBtn2.addEventListener("click", function() {
-			finaleEggs.style.display = "none";
-			finaleJester.style.display = "flex";
-		});
-		
-		finaleBtn3.addEventListener("click", function() {
-			location.href = "dh-jester.html";
-		});
-	
-	</script>
+	</section>
+	<section class="dh-finale-buttons">
+		<button id="finaleButton3" aria-label="Continue button">Continue</button>		
+	</section>
+	</section>
+	</main>
+	<!-- Javascript -->
+	<script src="./js/dh-final.js"></script>
 	</body>
 	</html>

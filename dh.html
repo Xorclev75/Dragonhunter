@@ -1,83 +1,41 @@
-	<!DOCTYPE html>
-	<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-	<head>	
+<head>
     <meta charset="utf-8">
-
-    <!--====== Title ======-->
     <title>Dragon Hunter</title>
-
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="/images/dh2.jpeg" type="image/jpg"> 
-	
-	<!--====== Stylesheet ======--> 
-    <link rel="stylesheet" href="C:/Users/schwa/OneDrive/WebDev/Dragon Hunter/css/dh-styles.css">
-	<link rel="stylesheet" href="/css/dh-styles.css">
-		
-	</head>
-	<body>	
-	<div class="dh-background">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/dh2.jpeg">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/dh-styles.css">
+</head>
+
+<body>
+    <main class="dh-background">
 	<div class="center">
-	<h1 class="dh-h1">Dragon Hunter</h1>
-	<div class="dh-img">
-	<img src= "/images/dh.png" style="height: 500px;" type="image/png">
+        <header>
+            <h1 class="dh-h1">Dragon Hunter</h1>
+        </header>
+        <section class="dh-img">
+            <img src="./images/dh.png" alt="Dragon Hunter logo">
+        </section>
+        <section class="start">
+            <button id="startButton" aria-label="Start Dragon Hunter game">Start</button>
+        </section>
 	</div>
-	<div class="start">
-	<button id="startButton">Start</button>
-	</div>
-	</div>
-	</div> <!-- dh-background div -->
-	<script>
-			document.addEventListener("DOMContentLoaded", function () {
-    // Reference to the start button
-    const button = document.getElementById("startButton");
+    </main>
 
-    // Function to reset all states and variables
-    function resetStates() {
-        // Reset all dragon defeat statuses to default (false)
-        localStorage.setItem('edrgDefeated', "false");
-        localStorage.setItem('fdrgDefeated', "false");
-        localStorage.setItem('idrgDefeated', "false");
-        localStorage.setItem('wdrgDefeated', "false");
+    <!-- Fallback for JavaScript -->
+    <noscript>
+        <p>JavaScript is required to play Dragon Hunter. Please enable JavaScript in your browser.</p>
+    </noscript>
 
-        // Reset heroName and riddleNumber
-        let heroName = ""; // Resets heroName to an empty string
-        let riddleReset = 0; // Resets riddleNumber to 0
-        localStorage.setItem('riddleNumber', riddleReset);
+    <!-- JavaScript -->
+    <script src="./js/dh.js"></script>
+</body>
 
-        // Debugging logs to confirm reset
-        console.log("States have been reset:");
-        console.log("edrgDefeated: ", localStorage.getItem('edrgDefeated'));
-        console.log("fdrgDefeated: ", localStorage.getItem('fdrgDefeated'));
-        console.log("idrgDefeated: ", localStorage.getItem('idrgDefeated'));
-        console.log("wdrgDefeated: ", localStorage.getItem('wdrgDefeated'));
-        console.log("riddleNumber: ", localStorage.getItem('riddleNumber'));
-    }
-
-    // Call resetStates on page load
-    resetStates();
-
-    // Function to parse dragon status correctly
-    function getDragonStatus(key) {
-        return localStorage.getItem(key) === "true"; // Returns true or false as boolean
-    }
-
-    // Test parsing logic
-    console.log("Parsed edrgDefeated: ", getDragonStatus('edrgDefeated'));
-    console.log("Parsed fdrgDefeated: ", getDragonStatus('fdrgDefeated'));
-    console.log("Parsed idrgDefeated: ", getDragonStatus('idrgDefeated'));
-    console.log("Parsed wdrgDefeated: ", getDragonStatus('wdrgDefeated'));
-
-    // Event listener for the Start button
-    button.addEventListener("click", function () {
-        // Navigate to the next screen
-        location.href = "dh-whisper.html";
-    });
-});
-
-	</script>
-	</body>
-	</html>
+</html>
